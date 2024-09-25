@@ -7,6 +7,7 @@
 ### 1. Download and install Hack font from [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)
 
 ### 2. Config terminal settings
+
 - Install **Powershell** (or you can **Powershell Preview (msix)**) on Microsoft Store
 - Switch Terminnal default profile to **Powershell** (or **Powershell Preview**)
 - Go **Settings/Apperance**, check Use acrylic material in the tab row
@@ -17,6 +18,7 @@
 - Scroll down, there is a Tranparency section. Set **Background opacity** = 50%, check **Enable acrylic material**
 
 ### 3. Config terminal
+
 - Type in the powershell: **"text $PROFILE.CurrentUserCurrentHost"**
 - Type: **". $env:USERPROFILE\.config\powershell\user_profile.ps1"** (this and above step is for setting up powershell script)
 - Back to powershell and type: **"Install-Module [posh-git](https://github.com/dahlbyk/posh-git) -Scope CurrentUser -Force"**
@@ -31,11 +33,13 @@
 ---
 
 ### Some interesting things can explore:
+
 - Terminal can add short-cut
 - Can add custom short-cut in Powershell via script (user_profile.ps1)
 
 #
 
 # Reference:
+
 - [How to set up PowerShell prompt with Oh My Posh on Windows 11](https://www.youtube.com/watch?v=5-aK2_WwrmM)
 - [Make Windows Terminal Look Better | Oh My Posh Guide](https://www.youtube.com/watch?v=-G6GbXGo4wo)
