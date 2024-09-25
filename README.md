@@ -13,3 +13,7 @@
 ## How to use
 
 Read the README file in config.
+
+# Reference:
+
+- [How to set up PowerShell prompt with Oh My Posh on Windows 11](https://www.youtube.com/watch?v=5-aK2_WwrmM)
