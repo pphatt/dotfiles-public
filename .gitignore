@@ -10,5 +10,5 @@
 # Ignore everything inside .config except for files
 /.config/*
 
-# Unignore all files inside .config
+# Unignore powershell files inside .config
 !/.config/powershell
