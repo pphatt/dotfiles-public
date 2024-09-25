@@ -7,6 +7,12 @@
 # Unignore .config folder
 !/.config/
 
+# Unignore images folder
+!/images/
+
+# Unignore README file
+!/README.md/
+
 # Ignore everything inside .config except for files
 /.config/*
 
