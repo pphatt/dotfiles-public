@@ -12,7 +12,8 @@ $omp_config = Join-Path $PSScriptRoot ".\phat.omp.json"
 oh-my-posh --init --shell pwsh --config $omp_config | Invoke-Expression
 
 # PSReadLine
-Set-PSReadLineOption -EditMode Emacs
+# Set-PSReadLineOption -EditMode Emacs # optional
+Set-PSReadLineKeyHandler -Key Tab -Function Complete
 Set-PSReadLineOption -BellStyle None
 Set-PSReadLineKeyHandler -Chord 'Ctrl+d' -Function DeleteChar
 Set-PSReadLineOption -PredictionSource History
