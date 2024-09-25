@@ -1,3 +1,11 @@
+# set PowerShell to UTF-8
+[console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
+
+# Prompt
+Import-Module posh-git
+$omp_config = Join-Path $PSScriptRoot ".\phat.omp.json"
+oh-my-posh --init --shell pwsh --config $omp_config | Invoke-Expression
+
 # Alias
 Set-Alias ll ls # > ll
 Set-Alias g git # > g
