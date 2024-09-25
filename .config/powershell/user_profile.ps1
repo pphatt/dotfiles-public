@@ -27,6 +27,7 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 Set-Alias ll ls # > ll
 Set-Alias g git # > g
 Set-Alias edit code # > edit
+Set-Alias text notepad # > notepad
 Set-Alias grep findstr # > grep
 Set-Alias touch New-Item # > touch
 Set-Alias tig 'C:\Program Files\Git\usr\bin\tig.exe' # > tig
