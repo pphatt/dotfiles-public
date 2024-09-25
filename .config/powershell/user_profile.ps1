@@ -1,10 +1,26 @@
 # set PowerShell to UTF-8
 [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
 
-# Prompt
+# posh-git
 Import-Module posh-git
+
+# Terminal-Icons
+Import-Module -Name Terminal-Icons
+
+# oh-my-posh theme
 $omp_config = Join-Path $PSScriptRoot ".\phat.omp.json"
 oh-my-posh --init --shell pwsh --config $omp_config | Invoke-Expression
+
+# PSReadLine
+Set-PSReadLineOption -EditMode Emacs
+Set-PSReadLineOption -BellStyle None
+Set-PSReadLineKeyHandler -Chord 'Ctrl+d' -Function DeleteChar
+Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -PredictionViewStyle ListView
+
+# Fzf
+Import-Module PSFzf
+Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
 
 # Alias
 Set-Alias ll ls # > ll
@@ -15,6 +31,7 @@ Set-Alias touch New-Item # > touch
 Set-Alias tig 'C:\Program Files\Git\usr\bin\tig.exe' # > tig
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe' # > ll | less
 
+# Utilities
 # Go to dev folder
 function dev {
     Set-Location "C:\dev"
@@ -28,4 +45,10 @@ function home {
 # Go to config file
 function config {
     Set-Location "$env:USERPROFILE\.config\powershell"
+}
+
+# Search
+function which ($command) {
+  Get-Command -Name $command -ErrorAction SilentlyContinue |
+    Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
