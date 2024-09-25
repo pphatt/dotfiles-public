@@ -1,0 +1,14 @@
+# Ignore everything
+/*
+
+# But not .gitignore itself
+!.gitignore
+
+# Unignore .config folder
+!/.config/
+
+# Ignore everything inside .config except for files
+/.config/*
+
+# Unignore all files inside .config
+!/.config/powershell
