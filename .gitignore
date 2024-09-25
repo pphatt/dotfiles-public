@@ -11,7 +11,7 @@
 !/images/
 
 # Unignore README file
-!/README.md/
+!/README.md
 
 # Ignore everything inside .config except for files
 /.config/*
