@@ -23,10 +23,6 @@
             "id": "User.paste"
         },
         {
-            "command": "find",
-            "id": "User.find"
-        },
-        {
             "command": 
             {
                 "action": "splitPane",
@@ -34,6 +30,10 @@
                 "splitMode": "duplicate"
             },
             "id": "User.splitPane.A6751878"
+        },
+        {
+            "command": "find",
+            "id": "User.find"
         },
         {
             "command": "closePane",
@@ -47,11 +47,33 @@
             "id": "User.nextTab.0"
         },
         {
+            "command": "duplicateTab",
+            "id": "User.duplicateTab"
+        },
+        {
             "command": 
             {
                 "action": "prevTab"
             },
             "id": "User.prevTab.0"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "right",
+                "splitMode": "duplicate"
+            },
+            "id": "User.splitPane.FEF0D40B"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "down",
+                "splitMode": "duplicate"
+            },
+            "id": "User.splitPane.10B260D2"
         }
     ],
     "copyFormatting": "none",
@@ -65,20 +87,20 @@
             "keys": "ctrl+c"
         },
         {
-            "id": "User.find",
-            "keys": "ctrl+shift+f"
-        },
-        {
             "id": "User.paste",
             "keys": "ctrl+v"
         },
         {
-            "id": "Terminal.MoveFocusRight",
-            "keys": "alt+l"
+            "id": "User.find",
+            "keys": "ctrl+shift+f"
         },
         {
             "id": "User.splitPane.A6751878",
             "keys": "alt+shift+d"
+        },
+        {
+            "id": "Terminal.MoveFocusRight",
+            "keys": "alt+l"
         },
         {
             "id": "User.closePane",
@@ -99,6 +121,18 @@
         {
             "id": "User.newTab.5DEADB41",
             "keys": "ctrl+t"
+        },
+        {
+            "id": "User.duplicateTab",
+            "keys": "ctrl+d"
+        },
+        {
+            "id": "User.splitPane.10B260D2",
+            "keys": "ctrl+alt+k"
+        },
+        {
+            "id": "User.splitPane.FEF0D40B",
+            "keys": "ctrl+alt+l"
         }
     ],
     "newTabMenu": 
