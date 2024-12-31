@@ -7,6 +7,9 @@
 # Unignore .config folder
 !/.config/
 
+# Unignore .wakatime-config folder
+!/.wakatime-config/
+
 # Unignore images folder
 !/images/
 
