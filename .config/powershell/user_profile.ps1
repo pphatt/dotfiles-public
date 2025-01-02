@@ -49,6 +49,11 @@ function config {
     Set-Location "$env:USERPROFILE\.config\powershell"
 }
 
+# view git commit in details > git log --pretty=fuller
+function glp {
+    & git log --pretty=fuller
+}
+
 # Search
 function which ($command) {
   Get-Command -Name $command -ErrorAction SilentlyContinue |
