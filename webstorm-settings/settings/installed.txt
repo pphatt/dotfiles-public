@@ -1,0 +1,13 @@
+monokai-pro
+com.vermouthx.idea
+com.markskelton.one-dark-theme
+com.wix.scss.lint
+com.wakatime.intellij.plugin
+ru.adelf.idea.dotenv
+com.intellij.grazie.pro
+org.intellij.prisma
+com.chrisrm.idea.MaterialThemeUI
+com.github.biomejs.intellijbiome
+com.mallowigi
+mobi.hsz.idea.gitignore
+izhangzhihao.rainbow.brackets

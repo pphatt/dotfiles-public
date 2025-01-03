@@ -10,6 +10,9 @@
 # Unignore .wakatime-config folder
 !/.wakatime-config/
 
+# Unignore webstorm-settings folder
+!/webstorm-settings
+
 # Unignore images folder
 !/images/
 

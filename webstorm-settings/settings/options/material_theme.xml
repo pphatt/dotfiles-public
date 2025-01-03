@@ -1,0 +1,11 @@
+<application>
+  <component name="MaterialThemeConfig">
+    <option name="accentColor" value="ff9800" />
+    <option name="secondAccentColor" />
+    <option name="highlightColor" />
+    <option name="focusColor" />
+    <option name="selectedTheme" value="DARKER" />
+    <option name="userId" value="7a813df2:1876918085e:-8000" />
+    <option name="version" value="8.13.2" />
+  </component>
+</application>

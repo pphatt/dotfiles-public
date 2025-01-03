@@ -1,0 +1,22 @@
+<application>
+  <component name="ProjectManager">
+    <defaultProject>
+      <component name="MaterialThemeProjectNewConfig">
+        <option name="metadata">
+          <MTProjectMetadataState>
+            <option name="migrated" value="true" />
+            <option name="pristineConfig" value="false" />
+            <option name="userId" value="7a813df2:1876918085e:-8000" />
+            <option name="version" value="8.13.2" />
+          </MTProjectMetadataState>
+        </option>
+        <option name="titleBarState">
+          <MTProjectTitleBarConfigState>
+            <option name="overrideColor" value="false" />
+          </MTProjectTitleBarConfigState>
+        </option>
+      </component>
+      <component name="PropertiesComponent">{}</component>
+    </defaultProject>
+  </component>
+</application>
