@@ -13,6 +13,9 @@
 # Unignore webstorm-settings folder
 !/webstorm-settings
 
+# Unignore visualstudio-settings folder
+!/visualstudio-settings
+
 # Unignore images folder
 !/images/
 
