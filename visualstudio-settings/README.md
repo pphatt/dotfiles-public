@@ -12,6 +12,8 @@
 - **Show Potential Fix (Show Refactor):** `Ctrl + .`.
 - **Show Recommendation:** `Ctrl + Alt + Spacebar`.
 - **Navigate tab around:** `Alt + Left Arrow (Previous)` and `Alt + Right Arrow (Next)`.
+- **Add Break Line Below** `Shift + Enter`.
+- **Add Break Line Above:** `Ctrl + Enter`.
 
 **Note:** Changing keyboard settings can be confusing and may disrupt existing key bindings if not done carefully. Focus on the following key aspects:
 
