@@ -49,7 +49,12 @@ function config {
     Set-Location "$env:USERPROFILE\.config\powershell"
 }
 
-# view git commit in details > git log --pretty=fuller
+# Go to PS History file
+function psh {
+    Set-Location "$env:USERPROFILE\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine"
+}
+
+# View git commit in details > git log --pretty=fuller
 function glp {
     & git log --pretty=fuller
 }
