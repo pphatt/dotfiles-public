@@ -54,6 +54,11 @@ function psh {
     Set-Location "$env:USERPROFILE\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine"
 }
 
+# Open path in window explorer
+function open {
+    ii .
+}
+
 # View git commit in details > git log --pretty=fuller
 function glp {
     & git log --pretty=fuller
