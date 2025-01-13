@@ -14,6 +14,8 @@
 - **Navigate tab around:** `Alt + Left Arrow (Previous)` and `Alt + Right Arrow (Next)`.
 - **Add Break Line Below** `Shift + Enter`.
 - **Add Break Line Above:** `Ctrl + Enter`.
+- **Comment Code:** `Ctrl + /`.
+- **Uncomment Code:** `Ctrl + Shift + /`.
 
 **Note:** Changing keyboard settings can be confusing and may disrupt existing key bindings if not done carefully. Focus on the following key aspects:
 
