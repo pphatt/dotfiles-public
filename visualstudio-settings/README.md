@@ -16,6 +16,7 @@
 - **Add Break Line Above:** `Ctrl + Enter`.
 - **Comment Code:** `Ctrl + /`.
 - **Uncomment Code:** `Ctrl + Shift + /`.
+- **Debugger Quick Watch:** `Shift + F9`.
 
 **Note:** Changing keyboard settings can be confusing and may disrupt existing key bindings if not done carefully. Focus on the following key aspects:
 
