@@ -8,13 +8,14 @@
 
 ### 2. Config terminal settings
 
-- Install **Powershell** (or you can **Powershell Preview (msix)**) on Microsoft Store
+- Install **Powershell** (or you can **Powershell Preview (msix)**), both can be found on Microsoft Store
 - Switch Terminnal default profile to **Powershell** (or **Powershell Preview**)
 - Go **Settings/Apperance**, check Use acrylic material in the tab row
 - Open Settings Json file (in the left corner)
 - Copy the content in the powershell.settings.json in the repository, paste it to the settings.json file (or just copy the color schemes)
+- If you paste entire powershell.settings.json, you don't need to do below steps of this section, it automatically configure for you.
 - Go the **Settings/Defaults/Appearance**, in color scheme choose the **"One Half Dark (modded)"**
-- Font face choose **Hack Nerd Font** (Hack NF)
+- Font face choose **Hack Nerd Font** (Hack NF) (You can choose **Bold** or Regular)
 - Scroll down, there is a Tranparency section. Set **Background opacity** = 50%, check **Enable acrylic material**
 
 ### 3. Config terminal
