@@ -12,6 +12,10 @@
             "id": "User.copy.644BA8F2"
         },
         {
+            "command": "paste",
+            "id": "User.paste"
+        },
+        {
             "command": 
             {
                 "action": "newTab"
@@ -19,8 +23,8 @@
             "id": "User.newTab.5DEADB41"
         },
         {
-            "command": "paste",
-            "id": "User.paste"
+            "command": "find",
+            "id": "User.find"
         },
         {
             "command": 
@@ -30,10 +34,6 @@
                 "splitMode": "duplicate"
             },
             "id": "User.splitPane.A6751878"
-        },
-        {
-            "command": "find",
-            "id": "User.find"
         },
         {
             "command": "closePane",
@@ -47,15 +47,15 @@
             "id": "User.nextTab.0"
         },
         {
-            "command": "duplicateTab",
-            "id": "User.duplicateTab"
-        },
-        {
             "command": 
             {
                 "action": "prevTab"
             },
             "id": "User.prevTab.0"
+        },
+        {
+            "command": "duplicateTab",
+            "id": "User.duplicateTab"
         },
         {
             "command": 
@@ -87,20 +87,20 @@
             "keys": "ctrl+c"
         },
         {
-            "id": "User.paste",
-            "keys": "ctrl+v"
-        },
-        {
             "id": "User.find",
             "keys": "ctrl+shift+f"
         },
         {
-            "id": "User.splitPane.A6751878",
-            "keys": "alt+shift+d"
+            "id": "User.paste",
+            "keys": "ctrl+v"
         },
         {
             "id": "Terminal.MoveFocusRight",
             "keys": "alt+l"
+        },
+        {
+            "id": "User.splitPane.A6751878",
+            "keys": "alt+shift+d"
         },
         {
             "id": "User.closePane",
@@ -175,40 +175,22 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "guid": "{d2801fa2-41b4-5de7-837e-d054263f53cb}",
+                "guid": "{ea07d11f-c3e5-5337-82a9-387ab133bdee}",
                 "hidden": false,
                 "name": "Developer Command Prompt for VS 2022 [Preview]",
                 "source": "Windows.Terminal.VisualStudio"
             },
             {
-                "guid": "{be1041ee-5fc0-515a-9acc-c280e2ab3485}",
+                "guid": "{59c92e14-0b4a-53a4-ae12-24865a8bfd01}",
                 "hidden": false,
                 "name": "Developer PowerShell for VS 2022 [Preview]",
                 "source": "Windows.Terminal.VisualStudio"
             },
             {
-                "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
-                "hidden": false,
-                "name": "Git Bash",
-                "source": "Git"
-            },
-            {
-                "guid": "{16208362-94fc-5b1f-a491-5b2624d5ab56}",
-                "hidden": true,
-                "name": "Visual Studio Debug Console",
-                "source": "VSDebugConsole"
-            },
-            {
-                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+                "guid": "{82be1cec-8040-587a-8a6b-cfa849f55aad}",
                 "hidden": false,
                 "name": "Ubuntu",
-                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
-            },
-            {
-                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-                "hidden": true,
-                "name": "Ubuntu",
-                "source": "Windows.Terminal.Wsl"
+                "source": "Microsoft.WSL"
             },
             {
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
@@ -217,6 +199,10 @@
                 "source": "Windows.Terminal.PowershellCore"
             },
             {
+                "font": 
+                {
+                    "face": "Hack Nerd Font"
+                },
                 "guid": "{2595cd9c-8f05-55ff-a1d4-93f3041ca67f}",
                 "hidden": false,
                 "name": "PowerShell Preview (msix)",
