@@ -18,6 +18,8 @@
 - Font face choose **Hack Nerd Font** (Hack NF) (You can choose **Bold** or Regular)
 - Scroll down, there is a Tranparency section. Set **Background opacity** = 50%, check **Enable acrylic material**
 
+- Sometime, when installing the Hack Nerd Font, the font can be error sometime. [Here is the solution](https://stackoverflow.com/a/77596968/30030901)
+
 ### 3. Config terminal
 
 - Type in the powershell: **"text $PROFILE.CurrentUserCurrentHost"**
