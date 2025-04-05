@@ -16,6 +16,9 @@
 # Unignore visualstudio-settings folder
 !/visualstudio-settings
 
+# Unignore visualstudio-extensions folder
+!/visualstudio-extensions
+
 # Unignore images folder
 !/images/
 
