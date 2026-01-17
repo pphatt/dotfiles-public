@@ -4,35 +4,23 @@
     {
       "type": "prompt",
       "alignment": "left",
+      "newline": true,
       "segments": [
         {
-          "properties": {
-            "cache_duration": "none"
-          },
-          "template": "{{ .UserName }}@{{ .HostName }} ",
           "foreground": "#b3ffde",
-          "type": "session",
-          "style": "plain"
+          "style": "plain",
+          "template": "{{ .UserName }}@{{ .HostName }}",
+          "type": "session"
         },
         {
-          "properties": {
-            "cache_duration": "none",
-            "style": "full"
-          },
-          "template": "{{ .Path }} ",
-          "foreground": "#42a9ff",
-          "type": "path",
-          "style": "plain"
-        },
-        {
-          "properties": {
-            "branch_icon": "",
-            "cache_duration": "none",
-            "fetch_status": true
-          },
-          "template": "git:{{ if or (.Working.Changed) (.Staging.Changed) (gt .StashCount 0) }}<#ffdd86>{{ .HEAD }}</>{{ else }}{{ .HEAD }}{{ end }}{{ if .Staging.Changed }} <#98c379>{{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }} <#d16971>{{ .Working.String }}</>{{ end }}",
           "type": "git",
-          "style": "plain"
+          "style": "plain",
+          "foreground": "#ffdd86",
+          "options": {
+            "fetch_status": true,
+            "branch_icon": ""
+          },
+          "template": " git:{{ .HEAD }}{{if .BranchStatus }} <#B388FF>{{ .BranchStatus }}</>{{ end }}{{ if .Staging.Changed }} <#98c379>{{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }}{{ end }}{{ if .Working.Changed }} <#d16971>{{ .Working.String }}{{ end }}{{ if gt .StashCount 0 }} <#ffdd86>{{ .StashCount }}{{ end }}"        
         }
       ]
     },
@@ -41,59 +29,81 @@
       "alignment": "right",
       "segments": [
         {
-          "properties": {
-            "cache_duration": "none",
-            "style": "austin",
-            "threshold": 0
-          },
-          "template": "{{.FormattedMs}}",
-          "foreground": "#b3ffde",
-          "background": "transparent",
           "type": "executiontime",
-          "style": "plain"
-        },
-        {
-          "properties": {
-            "cache_duration": "none"
-          },
-          "template": "<p:white> · </>",
-          "background": "transparent",
-          "type": "time",
-          "style": "plain"
-        },
-        {
-          "properties": {
-            "cache_duration": "none",
-            "time_format": "02/01/06 15:04"
-          },
-          "template": "{{.CurrentDate | date .Format}}",
           "foreground": "#b3ffde",
-          "background": "transparent",
+          "options": {
+            "style": "roundrock",
+            "always_enabled": true
+          },
+          "style": "diamond",
+          "template": "<b3ffde>{{ .FormattedMs }} - </>"
+        },
+        {
           "type": "time",
-          "style": "plain"
+          "foreground": "#b3ffde",
+          "options": {
+            "time_format": "02/01/06"
+          },
+          "style": "plain",
+          "template": "<b3ffde>[{{ .CurrentDate | date .Format }}</>"
+        },
+        {
+          "type": "time",
+          "foreground": "#b3ffde",
+          "options": {
+            "time_format": "15:04:05"
+          },
+          "style": "plain",
+          "template": "<b3ffde> - {{ .CurrentDate | date .Format }}]</>"
         }
       ]
     },
     {
       "type": "prompt",
       "alignment": "left",
+      "newline": true,
       "segments": [
         {
-          "properties": {
-            "always_enabled": true,
-            "cache_duration": "none"
+          "type": "path",
+          "foreground": "#61AFEF",
+          "options": {
+            "style": "full"
           },
-          "template": "> ",
-          "foreground": "#b3ffde",
-          "type": "status",
           "style": "plain",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}#42a9ff{{ end }}"
-          ]
+          "template": "<#61AFEF>\ue5ff {{ .Path }}</>"
         }
-      ],
-      "newline": true
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "root",
+          "foreground": "#E06C75",
+          "style": "plain",
+          "template": "\u0021"
+        },
+        {
+          "type": "text",
+          "foreground": "#E06C75",
+          "style": "plain",
+          "template": "\u276f"
+        }
+      ]
     }
   ],
-  "version": 3
+  "transient_prompt": {
+    "background": "transparent",
+    "foreground": "#5C6370",
+    "template": "❯ "
+  },
+  "final_space": true,
+  "upgrade": {
+    "interval": "168h",
+    "auto": false,
+    "source": "cdn"
+  },
+  "version": 4
 }
