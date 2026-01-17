@@ -16,7 +16,7 @@
 - If you paste entire powershell.settings.json, you don't need to do below steps of this section, it automatically configure for you.
 - Go the **Settings/Defaults/Appearance**, in color scheme choose the **"One Half Dark (modded)"**
 - Font face choose **Hack Nerd Font** (Hack NF) (You can choose **Bold** or Regular)
-- Scroll down, there is a Tranparency section. Set **Background opacity** = 50%, check **Enable acrylic material**
+- Scroll down, there is a Tranparency section. Set **Background opacity** = 100%, check **Enable acrylic material**
 
 - Sometime, when installing the Hack Nerd Font, the font can be error sometime. [Here is the solution](https://stackoverflow.com/a/77596968/30030901)
 
