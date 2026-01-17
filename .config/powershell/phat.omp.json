@@ -81,15 +81,15 @@
       "segments": [
         {
           "type": "root",
-          "foreground": "#E06C75",
+          "foreground": "#b3ffde",
           "style": "plain",
-          "template": "\u0021"
+          "template": "<#b3ffde>\u0021</>"
         },
         {
           "type": "text",
-          "foreground": "#E06C75",
+          "foreground": "#b3ffde",
           "style": "plain",
-          "template": "\u276f"
+          "template": "<#b3ffde>\u276f</>"
         }
       ]
     }
