@@ -69,3 +69,40 @@ function which ($command) {
   Get-Command -Name $command -ErrorAction SilentlyContinue |
     Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
+
+# ── System Power ──────────────────────────────────────────────────────────────
+function bye    { Stop-Computer -Force }                   # shutdown
+function reboot { Restart-Computer -Force }                # restart
+
+# ── Network ───────────────────────────────────────────────────────────────────
+function myip  { (Invoke-RestMethod ifconfig.me/ip).Trim() }   # public IP
+function localip {                                             # local IPs
+    Get-NetIPAddress -AddressFamily IPv4 |
+        Where-Object { $_.InterfaceAlias -notlike '*Loopback*' } |
+        Select-Object InterfaceAlias, IPAddress |
+        Format-Table -AutoSize
+}
+function flushdns { ipconfig /flushdns }                   # flush DNS cache
+
+# ── Process ───────────────────────────────────────────────────────────────────
+function pkill ($name) { Get-Process $name -ErrorAction SilentlyContinue | Stop-Process -Force }
+function pgrep ($name) { Get-Process $name -ErrorAction SilentlyContinue }
+
+# ── Filesystem ────────────────────────────────────────────────────────────────
+function mkcd ($path) { New-Item -ItemType Directory -Path $path -Force | Set-Location }
+function size  { Get-ChildItem -Recurse | Measure-Object -Property Length -Sum | ForEach-Object { "{0:N2} MB" -f ($_.Sum / 1MB) } }
+function top5  { Get-ChildItem | Sort-Object Length -Descending | Select-Object -First 5 Name, @{N='Size';E={"{0:N2} MB" -f ($_.Length/1MB)}} }
+
+# ── Git Shortcuts ─────────────────────────────────────────────────────────────
+function gst   { git status }
+function gco   { git checkout $args }
+function gcb   { git checkout -b $args }                   # create & switch branch
+function gpl   { git pull }
+function gps   { git push }
+function gadd  { git add $args }
+function gcm   { git commit -m $args }
+
+# ── Environment ───────────────────────────────────────────────────────────────
+function envs  { Get-ChildItem Env: | Sort-Object Name }   # list all env vars
+function path  { $env:PATH -split ';' }                    # list PATH entries, one per line
+function reload { . $PROFILE }                             # reload profile without restarting
