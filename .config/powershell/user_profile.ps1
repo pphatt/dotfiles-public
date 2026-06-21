@@ -71,8 +71,39 @@ function which ($command) {
 }
 
 # ── System Power ──────────────────────────────────────────────────────────────
-function bye    { Stop-Computer -Force }                   # shutdown
-function reboot { Restart-Computer -Force }                # restart
+function bye {
+    Write-Host "Closing all applications..." -ForegroundColor Cyan
+
+    # Apps to leave alone (system/background processes — closing these can break your session)
+    $excludeList = @(
+        'explorer', 'powershell', 'pwsh', 'WindowsTerminal',
+        'csrss', 'wininit', 'winlogon', 'services', 'lsass',
+        'svchost', 'dwm', 'fontdrvhost', 'conhost', 'SearchHost',
+        'ShellExperienceHost', 'RuntimeBroker', 'ApplicationFrameHost'
+    )
+
+    # Grab all processes that have a visible main window (i.e. actual user apps)
+    $apps = Get-Process | Where-Object {
+        $_.MainWindowHandle -ne 0 -and
+        $excludeList -notcontains $_.ProcessName
+    }
+
+    if (-not $apps) {
+        Write-Host "No open applications found." -ForegroundColor Green
+        return
+    }
+
+    foreach ($app in $apps) {
+        Write-Host "  Closing $($app.ProcessName)..." -ForegroundColor DarkGray
+        # CloseMainWindow() = graceful close (lets app prompt to save, run cleanup, etc.)
+        $app.CloseMainWindow() | Out-Null
+    }
+
+    Write-Host "Close signal sent to all applications." -ForegroundColor Green
+}
+
+function shutdown { Stop-Computer }
+function reboot { Restart-Computer }                # restart
 
 # ── Network ───────────────────────────────────────────────────────────────────
 function myip  { (Invoke-RestMethod ifconfig.me/ip).Trim() }   # public IP
